@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DatabaseClient</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="DatabaseClient.css" type="text/css"
+	media="screen" />
+<script src="Interfaces.js" type="text/javascript" charset="utf-8"></script>
+<script src="ProcessForm.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<form action="https://eianodeschnitzer.herokuapp.com/" method="get"></form>
+
+	<fieldset id="input">
+		<legend> Type student data here </legend>
+		<input type="text" name="name" placeholder="name" /> <input
+			type="text" name="firstname" placeholder="firstname" /> <input
+			type="text" name="matrikel" placeholder="matrikel" /> <input
+			type="text" name="course of studies" list="options"
+			placeholder="course of studies" />
+		<datalist id="options">
+			<option value="MKB"></option>
+			<option value="OMB"></option>
+			<option value="MIB"></option>
+		</datalist>
+		<input type="number" name="age" placeholder="age" min="1" max="120" />
+		<input type="radio" name="gender" value="male" id="male" /> <label
+			for="male">Male</label> <input type="radio" name="gender"
+			value="female" id="female" /> <label for="female">Female</label>
+		<button type="button" id="insert">Insert to database</button>
+	</fieldset>
+	<fieldset id="output">
+		<legend> All student data </legend>
+		<button type="button" id="refresh">Refresh</button>
+		<textarea rows="20" cols="90"> </textarea>
+	</fieldset>
+	<fieldset id="search">
+		<legend> Search by matrikel number </legend>
+		<input type="text" name="matrikel"
+			placeholder="matrikel number you search for" />
+		<button type="button" id="search">Search</button>
+		<textarea rows="1" cols="90"> </textarea>
+		</fieldset>
+	
+
+</body>
+</html>
